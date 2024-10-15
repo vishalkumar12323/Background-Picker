@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Background-Picker</title>
+  </head>
+  <body>
+    <main id="container">
+      <div class="pickr">
+        <button type="button" class="c--picker">Pick a color</button>
+      </div>
+
+      <div id="settings">
+        <form class="form">
+          <input type="hidden" id="color" value="#000000" />
+          <label for="form--label" class="form--label">Resolution</label>
+
+          <div class="form--inline">
+            <input
+              type="number"
+              placeholder="width"
+              name="width"
+              id="width"
+              required
+            />
+            <span>x</span>
+            <input
+              type="number"
+              placeholder="height"
+              name="height"
+              id="height"
+              required
+            />
+          </div>
+
+          <div class="submission">
+            <button class="download-btn" type="submit">Download</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <canvas id="canvas" width="200" height="200"></canvas>
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+  </body>
+</html>

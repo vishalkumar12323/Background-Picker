@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 1.1rem;
+}
+body {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: #0051fff6;
+}
+
+#container {
+  margin-top: 10rem;
+  max-width: 30rem;
+  padding: 1.5rem;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.4);
+
+  & .pickr {
+    width: 100%;
+
+    & .c--picker {
+      cursor: pointer;
+      width: 100%;
+      outline: none;
+      padding: 10px 45px;
+      font-size: var(--size);
+      color: #000;
+    }
+  }
+
+  & #settings {
+    margin-top: 1rem;
+
+    & .form {
+      & .form--label {
+        font-size: var(--size);
+      }
+
+      & .form--inline input {
+        --size: 1rem;
+        font-size: var(--size);
+        outline: none;
+        border: 1px solid #363636;
+        padding: 6px 2px;
+        border-radius: 5px;
+      }
+
+      & .submission {
+        margin-top: 1rem;
+        width: 100%;
+
+        & .download-btn {
+          width: 100%;
+          outline: none;
+          font-size: var(--size);
+          padding: 8px 0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
