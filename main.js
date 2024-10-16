@@ -11,10 +11,25 @@ form.addEventListener("submit", (e) => {
   const width = imageWidth.value;
   const height = imageHeight.value;
   const color = colorPicker.value;
+
+  canva.style.display = "none";
+  canva.width = width.toString();
+  canva.height = height.toString();
+
+  const ctx = canva.getContext("2d");
+  ctx.fillStyle = color;
+  ctx.fillRect(0, 0, width, height);
+
+  image = canva
+    .toDataURL("image/png", 1.0)
+    .replace("image/png", "image/octet-stream");
+
+  const link = document.createElement("a");
+  link.download = "background.png";
+  link.href = image;
+  link.click();
 });
-// colorPicker.addEventListener("change", (e) => {
-//   console.log("changed");
-// });
+
 colorPicker.addEventListener("input", (e) => {
   body.style.backgroundColor = colorPicker.value;
 });
