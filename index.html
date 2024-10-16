@@ -3,17 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"
-    />
     <link rel="stylesheet" href="./styles.css" />
     <title>Background-Picker</title>
   </head>
   <body>
     <main id="container">
       <div class="pickr">
-        <button type="button" class="c--picker">Pick a color</button>
+        <label for="picker" style="font-size: var(--size)"
+          >Pick a background color</label
+        >
+        <br />
+        <input
+          type="color"
+          width="100"
+          class="c--picker"
+          id="picker"
+          value="#0051fff6"
+        />
       </div>
 
       <div id="settings">
@@ -27,6 +33,7 @@
               placeholder="width"
               name="width"
               id="width"
+              value=""
               required
             />
             <span>x</span>
@@ -35,6 +42,7 @@
               placeholder="height"
               name="height"
               id="height"
+              value=""
               required
             />
           </div>
@@ -47,7 +55,10 @@
     </main>
 
     <canvas id="canvas" width="200" height="200"></canvas>
+
+    <p class="copy--right" style="color: #fafafa; font-size: var(--size)">
+      &copy; CopyRight 2024-25, Background-Picker.
+    </p>
     <script src="./main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
   </body>
 </html>
