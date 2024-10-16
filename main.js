@@ -1,7 +1,7 @@
 const colorPicker = document.querySelector(".c--picker");
 const imageWidth = document.querySelector("#width");
 const imageHeight = document.querySelector("#height");
-const canva = document.querySelector("#canvas");
+const canvas = document.querySelector("#canvas");
 const body = document.querySelector("body");
 
 const form = document.querySelector("form");
@@ -12,15 +12,15 @@ form.addEventListener("submit", (e) => {
   const height = imageHeight.value;
   const color = colorPicker.value;
 
-  canva.style.display = "none";
-  canva.width = width.toString();
-  canva.height = height.toString();
+  canvas.style.display = "none";
+  canvas.width = width.toString();
+  canvas.height = height.toString();
 
-  const ctx = canva.getContext("2d");
+  const ctx = canvas.getContext("2d");
   ctx.fillStyle = color;
   ctx.fillRect(0, 0, width, height);
 
-  image = canva
+  image = canvas
     .toDataURL("image/png", 1.0)
     .replace("image/png", "image/octet-stream");
 
